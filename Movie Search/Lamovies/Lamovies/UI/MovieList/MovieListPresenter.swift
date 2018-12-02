@@ -9,22 +9,21 @@
 import Foundation
 
 protocol MovieListProtocol : class {
-    
-    func showMovieList(newMovies : [Movie])
-    
+    func reloadData()
 }
 
 class MovieListPresenter: NSObject {
     
     weak var view:MovieListProtocol?
+    var movieList = [Movie]()
     
     
     //MARK:- init
     
-    init(persoView: MovieListProtocol) {
+    init(movieListView: MovieListProtocol) {
         super.init()
         
-        self.view = persoView
+        self.view = movieListView
         
     }
     
@@ -45,10 +44,12 @@ class MovieListPresenter: NSObject {
             type = movieType!
         }
         
-        WebRequestManager.shared.movieList(name : title, year: year, type: type, success: { (newResult : [Movie]) in
+        WebRequestManager.shared.movieList(name : title, year: year, type: type, success: { (movies : [Movie]) in
             
             DispatchQueue.main.async {
-                self.view?.showMovieList(newMovies: newResult)
+                self.movieList = movies
+                self.view?.reloadData()
+                //self.view?.showMovieList(newMovies: newResult)
             }
             
         }) { (errorCurrent) in
@@ -57,10 +58,11 @@ class MovieListPresenter: NSObject {
         
     }
     
-    func viewDidLoad() {
-        
-        self.view?.showMovieList(newMovies: [])
-        
+    func getMovieListCount() -> Int {
+        return self.movieList.count
     }
     
+    func getMovieList() -> [Movie] {
+        return self.movieList
+    }
 }

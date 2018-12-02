@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Lamovies/Service/WebRequestServices.swift"
-            timestampString = "539387421.1334521"
+            filePath = "Lamovies/Service/RequestManager.swift"
+            timestampString = "565487666.5167789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "getMovieDetail(urlPath:success:failure:)"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "getMovieDetails(path:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Lamovies/UI/MovieList/MovieListViewController.swift"
-            timestampString = "539964120.158958"
+            filePath = "Lamovies/Service/RequestManager.swift"
+            timestampString = "565487666.516906"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "showMovieList(newMovies:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getMoviesList(path:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Lamovies.RequestManager.getMoviesList(path: Swift.String, success: (Swift.Array&lt;Lamovies.Movie&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Lamovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mathieu/Documents/iOS/Swift/Personal%20project/Lamovies/Movie%20Search/Lamovies/Lamovies/Service/RequestManager.swift"
+                  timestampString = "565487427.530928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "668">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Lamovies.RequestManager.getMoviesList(path: Swift.String, success: (Swift.Array&lt;Lamovies.Movie&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Lamovies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Mathieu/Documents/iOS/Swift/Personal%20project/Lamovies/Movie%20Search/Lamovies/Lamovies/Service/RequestManager.swift"
+                  timestampString = "565487427.533626"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lamovies/Service/RequestManager.swift"
+            timestampString = "565487666.5169671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getMoviesList(path:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

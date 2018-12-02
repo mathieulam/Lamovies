@@ -6,6 +6,5 @@ target 'Lamovies' do
   use_frameworks!
 
   # Pods for Lamovies
-pod 'ObjectMapper'
 
 end

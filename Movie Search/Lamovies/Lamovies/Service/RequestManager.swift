@@ -7,13 +7,13 @@
 //
 
 import Foundation
+
 class RequestManager {
     
     static func getMoviesList(
         path: String,
-        keyPath: String? = nil,
-        completion: @escaping ([Any]) -> Void,
-        failure: @escaping (Error?) -> Void) {
+        success: @escaping ([Movie]) -> (),
+        failure: @escaping (Error?) -> ()) {
         
         
         
@@ -25,7 +25,23 @@ class RequestManager {
         request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
         
         
-        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard let data = data else {return}
+            
+            do {
+                let movieList = try JSONDecoder().decode(MoviesList.self, from: data)
+                guard let movies = movieList.movies else {return}
+                success(movies)
+            } catch let jsonError {
+                print("Error serializing json: ", jsonError)
+            }
+        }.resume()
+        
+        
+        
+        /*let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
             
             guard let _: Data = data, let _: URLResponse = response, error == nil else {
@@ -45,16 +61,15 @@ class RequestManager {
             
         }
         
-        task.resume()
+        task.resume()*/
         
     }
     
     
     static func getMovieDetails(
         path: String,
-        keyPath: String? = nil,
-        completion: @escaping (Any) -> Void,
-        failure: @escaping (Error?) -> Void) {
+        success: @escaping (Movie) -> (),
+        failure: @escaping (Error?) -> ()) {
         
         
         
@@ -65,7 +80,21 @@ class RequestManager {
         request.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
         
         
-        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard let data = data else {return}
+            
+            do {
+                let movie = try JSONDecoder().decode(Movie.self, from: data)
+                success(movie)
+            } catch let jsonError {
+                print("Error serializing json: ", jsonError)
+            }
+            }.resume()
+        
+        
+        
+        /*let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
             
             guard let _: Data = data, let _: URLResponse = response, error == nil else {
@@ -84,7 +113,7 @@ class RequestManager {
             
         }
         
-        task.resume()
+        task.resume()*/
         
     }
 }

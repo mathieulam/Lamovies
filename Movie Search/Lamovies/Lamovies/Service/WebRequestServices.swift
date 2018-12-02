@@ -11,32 +11,17 @@ import Foundation
 class WebRequestServices {
     
     static func getMoviesList(urlPath: String,
-                            success: @escaping ([Movie]) -> (),
-                            failure: @escaping (Error?) -> ()) {
+                              success: @escaping ([Movie]) -> (),
+                              failure: @escaping (Error?) -> ()) {
         
-        RequestManager.getMoviesList( path: urlPath,
-                                  completion: { _resultOMDB in
-                                    
-                                    if let __resultOMDB = _resultOMDB as? [Movie] {
-                                        success(__resultOMDB)
-                                    }
-                                    
-        }, failure: failure)
+        RequestManager.getMoviesList(path: urlPath, success: success, failure: failure)
         
     }
     
     static func getMovieDetail(urlPath: String,
-                         success: @escaping (Movie) -> (),
-                         failure: @escaping (Error?) -> ()) {
-        
-        RequestManager.getMovieDetails( path: urlPath,
-                                  completion: { _resultOMDB in
-                                    
-                                    if let __resultOMDB = _resultOMDB as? Movie {
-                                        success(__resultOMDB)
-                                    }
-                                    
-        }, failure: failure)
+                               success: @escaping (Movie) -> (),
+                               failure: @escaping (Error?) -> ()) {
+        RequestManager.getMovieDetails(path: urlPath, success: success, failure: failure)
         
     }
     

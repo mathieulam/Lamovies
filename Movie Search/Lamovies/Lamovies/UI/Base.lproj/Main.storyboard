@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J5Y-k9-pVB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J5Y-k9-pVB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Monument_Valley_1.2-Regular.otf">
             <string>Monument_Valley_1.2-Regular</string>
-        </array>
-        <array key="MyanmarSangamMN.ttc">
-            <string>MyanmarSangamMN</string>
-            <string>MyanmarSangamMN-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -127,7 +123,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQE-lI-lYe">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="824"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="830.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clapperboard_grey" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-DH-PHm">
                                                 <rect key="frame" x="78" y="8" width="219" height="315"/>
@@ -135,11 +131,6 @@
                                                     <constraint firstAttribute="height" constant="315" id="Bkt-4Z-kYi"/>
                                                     <constraint firstAttribute="width" constant="219" id="jqe-av-Qfx"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="moviePoster"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Z4-fV-f1o">
                                                 <rect key="frame" x="8" y="348" width="359" height="42"/>
@@ -148,13 +139,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPQ-6J-U6E">
-                                                <rect key="frame" x="15" y="491" width="352" height="22"/>
+                                                <rect key="frame" x="15" y="491" width="352" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LO7-3P-e7f">
-                                                <rect key="frame" x="8" y="562" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="568.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="Rgn-3T-hUl"/>
                                                 </constraints>
@@ -163,7 +154,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DVD :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FZ-FW-ouT">
-                                                <rect key="frame" x="8" y="591" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="597.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="l75-zv-Hr5"/>
                                                 </constraints>
@@ -172,7 +163,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Runtime :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOq-cT-9Z2">
-                                                <rect key="frame" x="8" y="620" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="626.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="QTE-bI-0jW"/>
                                                 </constraints>
@@ -181,7 +172,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yz-kV-eI9">
-                                                <rect key="frame" x="94" y="562" width="273" height="21"/>
+                                                <rect key="frame" x="94" y="569" width="273" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -190,7 +181,7 @@
                                                 <rect key="frame" x="0.0" y="405" width="375" height="66"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metascore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTQ-pN-tIn">
-                                                        <rect key="frame" x="8" y="8" width="66.5" height="21"/>
+                                                        <rect key="frame" x="8" y="8" width="67" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="QM2-sy-qdr"/>
                                                         </constraints>
@@ -199,7 +190,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9E-a3-hY0">
-                                                        <rect key="frame" x="150" y="8" width="75" height="21"/>
+                                                        <rect key="frame" x="149" y="8" width="77" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="cFb-rO-W6f"/>
                                                         </constraints>
@@ -208,25 +199,25 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PD-ue-Ah8">
-                                                        <rect key="frame" x="294" y="8" width="73" height="21"/>
+                                                        <rect key="frame" x="292.5" y="8" width="74.5" height="21"/>
                                                         <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="15"/>
                                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-iV-oPC">
-                                                        <rect key="frame" x="21" y="33" width="40.5" height="23"/>
+                                                        <rect key="frame" x="21.5" y="33" width="40" height="27"/>
                                                         <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-kQ-oYQ">
-                                                        <rect key="frame" x="167" y="33" width="40.5" height="23"/>
+                                                        <rect key="frame" x="167.5" y="33" width="40" height="27"/>
                                                         <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQX-BA-sRb">
-                                                        <rect key="frame" x="310.5" y="33" width="40.5" height="23"/>
+                                                        <rect key="frame" x="310" y="33" width="40" height="27"/>
                                                         <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -254,19 +245,19 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="271-dv-zo5">
-                                                <rect key="frame" x="94" y="591" width="273" height="22"/>
+                                                <rect key="frame" x="94" y="597" width="273" height="22"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bz-Gh-n3d">
-                                                <rect key="frame" x="94" y="621" width="273" height="19"/>
+                                                <rect key="frame" x="94" y="627" width="273" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ece-6y-DQv">
-                                                <rect key="frame" x="8" y="648" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="654.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="qMg-qm-JWN"/>
                                                 </constraints>
@@ -275,13 +266,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxe-N4-YM1">
-                                                <rect key="frame" x="94" y="648" width="273" height="21"/>
+                                                <rect key="frame" x="94" y="655" width="273" height="20"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actors :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-Dx-nzn">
-                                                <rect key="frame" x="8" y="677" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="683.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="3uW-eU-urc"/>
                                                 </constraints>
@@ -290,13 +281,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJG-yd-TkT">
-                                                <rect key="frame" x="94" y="676" width="273" height="23"/>
+                                                <rect key="frame" x="94" y="682" width="273" height="24"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkA-MH-bOo">
-                                                <rect key="frame" x="8" y="706" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="712.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="7ac-Si-JdO"/>
                                                 </constraints>
@@ -305,7 +296,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqS-HV-6kd">
-                                                <rect key="frame" x="8" y="735" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="741.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="7Qg-qQ-IgS"/>
                                                 </constraints>
@@ -314,7 +305,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii7-aj-xXK">
-                                                <rect key="frame" x="8" y="764" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="770.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="l6M-Hv-Ahf"/>
                                                 </constraints>
@@ -323,7 +314,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awards :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOs-T8-vTn">
-                                                <rect key="frame" x="8" y="793" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="799.5" width="73" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="8eZ-nZ-Y56"/>
                                                 </constraints>
@@ -332,37 +323,37 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-1b-YUH">
-                                                <rect key="frame" x="94" y="706" width="273" height="21"/>
+                                                <rect key="frame" x="94" y="712.5" width="273" height="21"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghj-4r-pVH">
-                                                <rect key="frame" x="94" y="735" width="273" height="21"/>
+                                                <rect key="frame" x="94" y="741.5" width="273" height="21"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozP-wN-BLD">
-                                                <rect key="frame" x="94" y="764" width="273" height="21"/>
+                                                <rect key="frame" x="94" y="770.5" width="273" height="21"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Writer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5a-dz-Ac8">
-                                                <rect key="frame" x="94" y="793" width="273" height="21"/>
+                                                <rect key="frame" x="94" y="799.5" width="273" height="21"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year :" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8By-rh-GNe">
-                                                <rect key="frame" x="8" y="533" width="73" height="21"/>
+                                                <rect key="frame" x="8" y="536.5" width="73" height="24"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCl-uz-ODs">
-                                                <rect key="frame" x="94" y="533.5" width="273" height="20.5"/>
+                                                <rect key="frame" x="94" y="536.5" width="273" height="24"/>
                                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -488,9 +479,6 @@
                         <viewLayoutGuide key="safeArea" id="82m-uf-T4z"/>
                     </view>
                     <size key="freeformSize" width="375" height="1000"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="movieDetailsActorsLabel" destination="YJG-yd-TkT" id="wzX-qU-Mnr"/>
                         <outlet property="movieDetailsAwardsLabel" destination="q5a-dz-Ac8" id="MEt-A7-CfR"/>
@@ -563,9 +551,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w9j-wo-sLt"/>
                     </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="movieNoResultsLabel" destination="EvQ-7b-24G" id="64e-jB-5fR"/>
                         <outlet property="movieSearchBar" destination="JD5-rz-H6Z" id="GL6-Jg-YwA"/>
@@ -597,7 +582,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clapperboard_grey" width="256" height="256"/>
+        <image name="clapperboard_grey" width="409.60000610351562" height="409.60000610351562"/>
         <image name="main_background" width="3280" height="4438"/>
     </resources>
 </document>
