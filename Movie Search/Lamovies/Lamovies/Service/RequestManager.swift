@@ -39,30 +39,6 @@ class RequestManager {
             }
         }.resume()
         
-        
-        
-        /*let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
-            
-            
-            guard let _: Data = data, let _: URLResponse = response, error == nil else {
-                print("*****error")
-                return
-            }
-            let dataString = String(data: data!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-            print("*****This is the data : \(dataString)") //JSONSerialization
-            
-            
-            if let objectMovieList : [Movie] = MoviesList(JSONString: dataString!)?.objectResult{
-                
-                completion(objectMovieList)
-                
-            }
-            
-            
-        }
-        
-        task.resume()*/
-        
     }
     
     
@@ -90,30 +66,6 @@ class RequestManager {
             } catch let jsonError {
                 print("Error serializing json: ", jsonError)
             }
-            }.resume()
-        
-        
-        
-        /*let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
-            
-            
-            guard let _: Data = data, let _: URLResponse = response, error == nil else {
-                print("*****error")
-                return
-            }
-            let dataString = String(data: data!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
-            print("*****This is the data : \(dataString)") //JSONSerialization
-            
-            if let objectMovie : Movie = Movie(JSONString: dataString!){
-                
-                completion(objectMovie)
-                
-            }
-            
-            
-        }
-        
-        task.resume()*/
-        
+        }.resume()
     }
 }
