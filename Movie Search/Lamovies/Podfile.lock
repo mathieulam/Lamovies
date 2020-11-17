@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 0c0df8c39896da094ecf54c86e97614137494f30
+PODS:
+  - Alamofire (4.9.1)
+  - PromiseKit/Alamofire (6.13.1):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.13.1)
 
-COCOAPODS: 1.5.2
+DEPENDENCIES:
+  - PromiseKit/Alamofire
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+
+PODFILE CHECKSUM: 19de18af6aaff560d177e4e1c0e32e38bf61a8b6
+
+COCOAPODS: 1.9.1

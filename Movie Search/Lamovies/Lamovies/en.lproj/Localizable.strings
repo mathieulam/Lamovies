@@ -7,6 +7,6 @@
 */
 
 "popup_title" = "Hey There!";
-"popup_message" = "I know that you know how it works!! You have to fill at least the title of the movie. But hey, it's okay, I got your back ;)";
+"popup_message" = "The name is empty but we filled it in for you.";
 "popup_button" = "Thanks";
 

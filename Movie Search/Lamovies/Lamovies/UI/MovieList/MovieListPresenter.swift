@@ -15,12 +15,17 @@ protocol MovieListProtocol : class {
 class MovieListPresenter: NSObject {
     
     weak var view:MovieListProtocol?
-    var movieList = [Movie]()
+    var movieList = [DomainMovie]()
     
+    private let getMovies: GetMovies
     
     //MARK:- init
     
-    init(movieListView: MovieListProtocol) {
+    init(
+        movieListView: MovieListProtocol,
+        getMovies: GetMovies = .init()
+    ) {
+        self.getMovies = getMovies
         super.init()
         
         self.view = movieListView
@@ -44,25 +49,22 @@ class MovieListPresenter: NSObject {
             type = movieType!
         }
         
-        WebRequestManager.shared.movieList(name : title, year: year, type: type, success: { (movies : [Movie]) in
-            
-            DispatchQueue.main.async {
-                self.movieList = movies
-                self.view?.reloadData()
-                //self.view?.showMovieList(newMovies: newResult)
-            }
-            
-        }) { (errorCurrent) in
-            
-        }
         
+        getMovies.execute(movieName: title, movieYear: year, movieType: type).done {
+            guard let movies = $0 else { return }
+            self.movieList = movies
+            self.view?.reloadData()
+        }.catch {
+            error in
+            print("Error \(error)")
+        }
     }
     
     func getMovieListCount() -> Int {
         return self.movieList.count
     }
     
-    func getMovieList() -> [Movie] {
+    func getMovieList() -> [DomainMovie] {
         return self.movieList
     }
 }

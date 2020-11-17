@@ -10,8 +10,8 @@ import UIKit
 
 class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MovieListProtocol {
     
-    @IBOutlet weak var movieTableView: UITableView!
     @IBOutlet weak var movieSearchBar: UISearchBar!
+    @IBOutlet weak var movieTableView: UITableView!
     @IBOutlet weak var movieNoResultsLabel: UILabel!
     var presenter: MovieListPresenter!
     
@@ -29,19 +29,6 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         movieTableView.dataSource = self
         
         presenter = MovieListPresenter(movieListView: self)
-        
-        //remove ugly background from search bar view
-        for subView in movieSearchBar.subviews {
-            for view in subView.subviews {
-                if view.isKind(of: NSClassFromString("UISearchBarBackground")!) {
-                    let imageView = view as! UIImageView
-                    imageView.removeFromSuperview()
-                }
-                if view.isKind(of: NSClassFromString("UITextField")!) {
-                    view.backgroundColor = UIColor.white
-                }
-            }
-        }
         
         self.presenter.searchMovies(movieTitle : movieTitle, movieYear: movieYear, movieType: movieType)
         

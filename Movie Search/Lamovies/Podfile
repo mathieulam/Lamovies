@@ -6,5 +6,6 @@ target 'Lamovies' do
   use_frameworks!
 
   # Pods for Lamovies
+  pod 'PromiseKit/Alamofire'
 
 end

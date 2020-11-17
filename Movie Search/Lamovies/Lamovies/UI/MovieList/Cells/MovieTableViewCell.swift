@@ -19,7 +19,7 @@ class MovieTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureCell(movieObject: Movie) {
+    func configureCell(movieObject: DomainMovie) {
         movieCellContainerView.layer.cornerRadius = 5
         if let movieTitle = movieObject.title {
             movieTitleLabel.text = movieTitle
