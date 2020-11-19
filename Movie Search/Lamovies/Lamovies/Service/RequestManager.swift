@@ -12,7 +12,7 @@ class RequestManager {
     
     static func getMoviesList(
         path: String,
-        success: @escaping ([Movie]) -> (),
+        success: @escaping ([MovieResponse]) -> (),
         failure: @escaping (Error?) -> ()) {
         
         
@@ -31,7 +31,7 @@ class RequestManager {
             guard let data = data else {return}
             
             do {
-                let movieList = try JSONDecoder().decode(MoviesList.self, from: data)
+                let movieList = try JSONDecoder().decode(MoviesResponse.self, from: data)
                 guard let movies = movieList.movies else {return}
                 success(movies)
             } catch let jsonError {
@@ -44,7 +44,7 @@ class RequestManager {
     
     static func getMovieDetails(
         path: String,
-        success: @escaping (Movie) -> (),
+        success: @escaping (MovieResponse) -> (),
         failure: @escaping (Error?) -> ()) {
         
         
@@ -61,7 +61,7 @@ class RequestManager {
             guard let data = data else {return}
             
             do {
-                let movie = try JSONDecoder().decode(Movie.self, from: data)
+                let movie = try JSONDecoder().decode(MovieResponse.self, from: data)
                 success(movie)
             } catch let jsonError {
                 print("Error serializing json: ", jsonError)

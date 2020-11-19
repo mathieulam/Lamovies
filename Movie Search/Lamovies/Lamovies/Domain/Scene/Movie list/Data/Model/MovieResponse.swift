@@ -64,7 +64,7 @@ struct MovieResponse: Codable {
 
 extension MovieResponse {
     
-    func toDomainModel() -> DomainMovie {
+    func toDomainModel() -> Movie {
         .init(
             title: title,
             year: year,

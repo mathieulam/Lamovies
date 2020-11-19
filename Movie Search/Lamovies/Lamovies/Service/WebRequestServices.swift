@@ -11,7 +11,7 @@ import Foundation
 class WebRequestServices {
     
     static func getMoviesList(urlPath: String,
-                              success: @escaping ([Movie]) -> (),
+                              success: @escaping ([MovieResponse]) -> (),
                               failure: @escaping (Error?) -> ()) {
         
         RequestManager.getMoviesList(path: urlPath, success: success, failure: failure)
@@ -19,7 +19,7 @@ class WebRequestServices {
     }
     
     static func getMovieDetail(urlPath: String,
-                               success: @escaping (Movie) -> (),
+                               success: @escaping (MovieResponse) -> (),
                                failure: @escaping (Error?) -> ()) {
         RequestManager.getMovieDetails(path: urlPath, success: success, failure: failure)
         

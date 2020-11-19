@@ -1,5 +1,5 @@
 //
-//  DomainMovie.swift
+//  Movie.swift
 //  Lamovies
 //
 //  Created by Mathieu Lamvohee on 11/17/20.
@@ -9,7 +9,7 @@
 import Foundation
 
 #warning("rename to Movie when the old one is removed")
-struct DomainMovie {
+struct Movie {
     
     let title: String?
     let year: String?

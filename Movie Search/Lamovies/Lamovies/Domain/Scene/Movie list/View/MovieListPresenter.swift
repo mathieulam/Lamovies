@@ -8,27 +8,24 @@
 
 import Foundation
 
-protocol MovieListProtocol : class {
-    func reloadData()
+protocol MoviesViewDelegate : class {
+    func updateData()
 }
 
 class MovieListPresenter: NSObject {
     
-    weak var view:MovieListProtocol?
-    var movieList = [DomainMovie]()
+    weak var moviesViewDelegate: MoviesViewDelegate?
     
+    private var movies: [Movie] = []
     private let getMovies: GetMovies
     
-    //MARK:- init
-    
     init(
-        movieListView: MovieListProtocol,
+        moviesViewDelegate: MoviesViewDelegate,
         getMovies: GetMovies = .init()
     ) {
         self.getMovies = getMovies
         super.init()
-        
-        self.view = movieListView
+        self.moviesViewDelegate = moviesViewDelegate
         
     }
     
@@ -52,8 +49,8 @@ class MovieListPresenter: NSObject {
         
         getMovies.execute(movieName: title, movieYear: year, movieType: type).done {
             guard let movies = $0 else { return }
-            self.movieList = movies
-            self.view?.reloadData()
+            self.movies = movies
+            self.moviesViewDelegate?.updateData()
         }.catch {
             error in
             print("Error \(error)")
@@ -61,10 +58,10 @@ class MovieListPresenter: NSObject {
     }
     
     func getMovieListCount() -> Int {
-        return self.movieList.count
+        movies.count
     }
     
-    func getMovieList() -> [DomainMovie] {
-        return self.movieList
+    func getMovieList() -> [Movie] {
+        movies
     }
 }

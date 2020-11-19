@@ -9,6 +9,7 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController {
+
     @IBOutlet weak var movieDetailsImageView: UIImageView!
     @IBOutlet weak var movieDetailsTitleLabel: UILabel!
     @IBOutlet weak var movieDetailsMetascoreLabel: UILabel!
@@ -26,7 +27,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var movieDetailsCountryLabel: UILabel!
     @IBOutlet weak var movieDetailsAwardsLabel: UILabel!
     
-    var currentMovie : Movie!
+    var currentMovie : MovieResponse!
     var imdbId = ""
 
     override func viewDidLoad() {
@@ -34,13 +35,12 @@ class MovieDetailsViewController: UIViewController {
 
         self.updateIHM()
         
-        WebRequestManager.shared.movieDetails(movieId: imdbId, success: { (newResult : Movie) in
+        WebRequestManager.shared.movieDetails(movieId: imdbId, success: { (newResult : MovieResponse) in
             
             DispatchQueue.main.async {
-                
-                self.currentMovie = newResult
-                self.updateIHM()
-                
+                [weak self] in
+                self?.currentMovie = newResult
+                self?.updateIHM()
             }
             
         }) { (errorCurrent) in
@@ -88,11 +88,5 @@ class MovieDetailsViewController: UIViewController {
             self.movieDetailsAwardsLabel.text = ""
             self.movieDetailsImageView.image = UIImage(named: "clapperboard_grey")
         }
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
 }

@@ -16,7 +16,7 @@ struct GetMovies {
         self.moviesWebservice = moviesWebservice
     }
 
-    func execute(movieName: String, movieYear: String, movieType: String) -> Promise<[DomainMovie]?> {
+    func execute(movieName: String, movieYear: String, movieType: String) -> Promise<[Movie]?> {
         moviesWebservice.performRequest(
             movieName: movieName,
             movieYear: movieYear,

@@ -13,7 +13,7 @@ class WebRequestManager {
     
     
     func movieList(name: String, year: String, type: String,
-        success: @escaping ([Movie]) -> (),
+        success: @escaping ([MovieResponse]) -> (),
         failure: @escaping (Error?) -> ()) {
         
         let urlPath = URL_API_OMDB + "?s=\(name)&" + "y=\(year)&" + "t=\(type)&" + "apikey=e8103610"
@@ -22,7 +22,7 @@ class WebRequestManager {
     }
     
     func movieDetails(movieId: String,
-                           success: @escaping (Movie) -> (),
+                           success: @escaping (MovieResponse) -> (),
                            failure: @escaping (Error?) -> ()) {
         
         let urlPath = URL_API_OMDB + "?i=\(movieId)&" + "apikey=e8103610"
