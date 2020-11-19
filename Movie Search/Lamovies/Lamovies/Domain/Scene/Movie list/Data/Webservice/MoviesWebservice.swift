@@ -15,11 +15,13 @@ class MoviesWebservice: BaseWebservice {
         httpMethod = .post
     }
     
-    func performRequest(movieName: String?, movieYear: String?, movieType: String?) -> Promise<MoviesResponse> {
+    func performRequest(movieName: String?, movieYear: String?, movieType: String?) -> Promise<[MovieResponse]?> {
         //This has to be done like this because the api returns different response when the apikey is the starting parameter
         if let name = movieName, let year = movieYear, let type = movieType {
             url = "http://www.omdbapi.com/?s=\(name)&y=\(year)&t=\(type)&apikey=e8103610"
         }
-        return super.performRequest()
+        
+        let promise: Promise<MoviesResponse> = super.performRequest()
+        return promise.map { $0.movies }
     }
 }

@@ -22,8 +22,8 @@ struct GetMovies {
             movieYear: movieYear,
             movieType: movieType
         ).map {
-            moviesResponse in
-            moviesResponse.movies?.map {
+            movieResponses in
+            movieResponses?.map{
                 $0.toDomainModel()
             }
         }
