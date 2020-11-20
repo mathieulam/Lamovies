@@ -34,38 +34,6 @@
             endingLineNumber = "29"
             landmarkName = "getMoviesList(path:success:failure:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "915CB233-346D-41D8-BAF6-31A4A5C1EBD7 - 7dfee54ba5e760c1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Lamovies.RequestManager.getMoviesList(path: Swift.String, success: (Swift.Array&lt;Lamovies.Movie&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Lamovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Mathieu/Documents/iOS/Swift/Personal%20project/Lamovies/Movie%20Search/Lamovies/Lamovies/Service/RequestManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "1396">
-               </Location>
-               <Location
-                  uuid = "915CB233-346D-41D8-BAF6-31A4A5C1EBD7 - 5739dfd0298cf7ff"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static Lamovies.RequestManager.getMoviesList(path: Swift.String, success: (Swift.Array&lt;Lamovies.Movie&gt;) -&gt; (), failure: (Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Lamovies"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Mathieu/Documents/iOS/Swift/Personal%20project/Lamovies/Movie%20Search/Lamovies/Lamovies/Service/RequestManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

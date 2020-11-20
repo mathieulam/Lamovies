@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MoviesViewDelegate {
+class MovieListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CanUpdateViewDelegate {
     
     @IBOutlet weak var movieSearchBar: UISearchBar!
     @IBOutlet weak var movieTableView: UITableView!
@@ -28,7 +28,7 @@ class MovieListViewController: UIViewController, UITableViewDelegate, UITableVie
         movieTableView.delegate = self
         movieTableView.dataSource = self
         
-        presenter = MovieListPresenter(moviesViewDelegate: self)
+        presenter = MovieListPresenter(canUpdateViewDelegate: self)
         presenter.searchMovies(movieTitle : movieTitle, movieYear: movieYear, movieType: movieType)
     }
 }

@@ -8,7 +8,6 @@
 
 import Foundation
 
-#warning("rename to Movie when the old one is removed")
 struct Movie {
     
     let title: String?

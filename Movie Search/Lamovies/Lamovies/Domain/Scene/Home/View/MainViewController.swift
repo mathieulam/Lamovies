@@ -18,8 +18,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     let movieTypePicker = UIPickerView()
     let moviePickerData = [String](arrayLiteral: "movie", "series", "episode")
     let defaultMovies = ["Batman", "Fight Club", "Breaking Bad", "Inception", "Lord Of The Ring", "How High"]
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         movieTypeTextField.inputView = movieTypePicker
@@ -108,6 +107,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         alertViewController.addAction(confirmButtonAction)
         
-        present(alertViewController, animated: true, completion: nil)
+        present(alertViewController, animated: true)
     }
 }

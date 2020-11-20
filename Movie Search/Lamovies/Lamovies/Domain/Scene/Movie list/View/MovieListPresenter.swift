@@ -8,24 +8,20 @@
 
 import Foundation
 
-protocol MoviesViewDelegate : class {
-    func updateData()
-}
-
 class MovieListPresenter: NSObject {
     
-    weak var moviesViewDelegate: MoviesViewDelegate?
+    weak var canUpdateViewDelegate: CanUpdateViewDelegate?
     
     private var movies: [Movie] = []
     private let getMovies: GetMovies
     
     init(
-        moviesViewDelegate: MoviesViewDelegate,
+        canUpdateViewDelegate: CanUpdateViewDelegate,
         getMovies: GetMovies = .init()
     ) {
         self.getMovies = getMovies
         super.init()
-        self.moviesViewDelegate = moviesViewDelegate
+        self.canUpdateViewDelegate = canUpdateViewDelegate
         
     }
     
@@ -50,7 +46,7 @@ class MovieListPresenter: NSObject {
         getMovies.execute(movieName: title, movieYear: year, movieType: type).done {
             guard let movies = $0 else { return }
             self.movies = movies
-            self.moviesViewDelegate?.updateData()
+            self.canUpdateViewDelegate?.updateData()
         }.catch {
             error in
             print("Error \(error)")
