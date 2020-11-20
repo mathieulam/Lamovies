@@ -136,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				4E7B4AFA2567310A00EED216 /* Helper */,
-				4E3C9AB7256458F9007528F8 /* Common */,
 				4E3C9AB4256458CF007528F8 /* Scene */,
 				4E7B4B3425673CAF00EED216 /* Supporting files */,
 			);
@@ -245,6 +244,7 @@
 		4E4AB41620252E4E003AE866 /* Lamovies */ = {
 			isa = PBXGroup;
 			children = (
+				4E3C9AB7256458F9007528F8 /* Common */,
 				4E3C9AB3256458C6007528F8 /* Domain */,
 				4E4AB42320252E4E003AE866 /* Info.plist */,
 			);
